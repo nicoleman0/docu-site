@@ -26,10 +26,10 @@ theme:
 # Navigation / sidebar
 nav:
   - Home: index.md
-  - Introduction: docs/introduction.md
+  - Introduction: introduction.md
   - Policies:
-      - Acceptable-Use Policy: docs/policies/aup.md
-  - References: docs/references.md
+      - Acceptable-Use Policy: policies/aup.md
+  - References: references.md
 
 # Markdown extensions
 markdown_extensions:
