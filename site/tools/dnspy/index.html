@@ -677,6 +677,7 @@
 
 <h1 id="dnspy">DNSpy<a class="headerlink" href="#dnspy" title="Permanent link">&para;</a></h1>
 <p>DNSpy is a small GUI tool for performing DNS queries and basic enumeration of common DNS record types.</p>
+<p><a href="https://github.com/nicoleman0/DNSpy">GitHub Repo</a></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>DNSpy provides a simple Tkinter-based interface to run DNS queries (A, AAAA, CNAME, MX, NS, TXT, SOA) and view results in a scrolling output pane. It supports verbose mode, multi-threaded query execution, and error logging.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
@@ -688,14 +689,21 @@
 <li>Small, single-file GUI entrypoint: <code>dnspy_gui.DNSpyGUI</code></li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<ol>
+<ul>
 <li>
 <p>Ensure Python 3.x is installed.</p>
 </li>
 <li>
-<p>Install dependencies:</p>
+<p>Get the files</p>
 </li>
-</ol>
+</ul>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/nicoleman0/DNSpy
+<span class="nb">cd</span><span class="w"> </span>DNSpy
+</code></pre></div>
+
+<ul>
+<li>Install dependencies:</li>
+</ul>
 <div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>dnspython
 </code></pre></div>
 

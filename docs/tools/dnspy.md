@@ -2,6 +2,8 @@
 
 DNSpy is a small GUI tool for performing DNS queries and basic enumeration of common DNS record types.
 
+[GitHub Repo](https://github.com/nicoleman0/DNSpy)
+
 ## Overview
 
 DNSpy provides a simple Tkinter-based interface to run DNS queries (A, AAAA, CNAME, MX, NS, TXT, SOA) and view results in a scrolling output pane. It supports verbose mode, multi-threaded query execution, and error logging.
@@ -16,9 +18,16 @@ DNSpy provides a simple Tkinter-based interface to run DNS queries (A, AAAA, CNA
 
 ## Installation
 
-1. Ensure Python 3.x is installed.
+- Ensure Python 3.x is installed.
 
-2. Install dependencies:
+- Get the files
+
+```bash
+git clone https://github.com/nicoleman0/DNSpy
+cd DNSpy
+```
+
+- Install dependencies:
 
 ```bash
 pip install dnspython
