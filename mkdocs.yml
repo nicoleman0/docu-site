@@ -23,7 +23,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Introduction: introduction.md
+  - About: about.md
   - Policies:
       - Acceptable-Use Policy: policies/aup.md
   - References: references.md
