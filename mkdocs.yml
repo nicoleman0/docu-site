@@ -26,6 +26,8 @@ nav:
   - About: about.md
   - Policies:
       - Acceptable-Use Policy: policies/aup.md
+  - Tools:
+      - DNSpy: tools/dnspy.md
   - References: references.md
 
 markdown_extensions:
