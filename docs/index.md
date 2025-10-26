@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Corvus Open Source Library
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a site for hosting open-source security policies and tools. 
 
-## Commands
+Maintained by **Nicholas Coleman**.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Policies
 
-## Project layout
+As of now the only security policy listed on this site is an Acceptable-Use Policy.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Organizations are free to use it, as long as proper credit is given to the original author of the policy and maintainer of this site.
