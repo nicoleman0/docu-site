@@ -1,8 +1,11 @@
-# mkdocs.yml
 site_name: Corvus Library
 site_url: https://nicoleman0.github.io/docu-site/
 site_description: Open-source security policies and cybersecurity documentation
 site_author: Nicholas Coleman
+
+site_dir: site
+use_directory_urls: true
+strict: true
 
 # Theme configuration
 theme:
@@ -28,7 +31,7 @@ nav:
       - Acceptable-Use Policy: docs/policies/aup.md
   - References: docs/references.md
 
-# Markdown extensions (optional but useful)
+# Markdown extensions
 markdown_extensions:
   - admonition
   - codehilite
@@ -37,8 +40,11 @@ markdown_extensions:
   - toc:
       permalink: true
 
-# Extra options (optional)
+# Extra options
+repo_url: https://github.com/nicoleman0/docu-site
+repo_name: GitHub
 extra:
+  base_url: /docu-site/
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nicoleman0/
