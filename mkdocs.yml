@@ -28,6 +28,7 @@ nav:
       - Acceptable-Use Policy: policies/aup.md
   - Tools:
       - DNSpy: tools/dnspy.md
+      - VTScan: tools/vtscan.md
   - References: references.md
 
 markdown_extensions:
