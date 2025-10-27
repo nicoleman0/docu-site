@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nicoleman0.github.io/docu-site/</loc>
-         <lastmod>2025-10-26</lastmod>
+         <lastmod>2025-10-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/about/</loc>
-         <lastmod>2025-10-26</lastmod>
+         <lastmod>2025-10-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/references/</loc>
-         <lastmod>2025-10-26</lastmod>
+         <lastmod>2025-10-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/policies/aup/</loc>
-         <lastmod>2025-10-26</lastmod>
+         <lastmod>2025-10-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/tools/dnspy/</loc>
-         <lastmod>2025-10-26</lastmod>
+         <lastmod>2025-10-27</lastmod>
+    </url>
+    <url>
+         <loc>https://nicoleman0.github.io/docu-site/tools/vtscan/</loc>
+         <lastmod>2025-10-27</lastmod>
     </url>
 </urlset>
