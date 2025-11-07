@@ -12,7 +12,7 @@
         <meta name="author" content="Nicholas Coleman">
       
       
-        <link rel="canonical" href="https://nicoleman0.github.io/docu-site/blog/fixing-ubuntu-vulnerabilities/">
+        <link rel="canonical" href="https://nicoleman0.github.io/docu-site/blog/wazuh-setup/">
       
       
         <link rel="prev" href="../../tools/vtscan/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Fixing Ubuntu Vulnerabilities - Corvus Library</title>
+        <title>Setting Up Wazuh - Corvus Library</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#building-a-home-siem-with-wazuh" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fixing Ubuntu Vulnerabilities
+              Setting Up Wazuh
             
           </span>
         </div>
@@ -496,18 +501,196 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Setting Up Wazuh
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Fixing Ubuntu Vulnerabilities
+    Setting Up Wazuh
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-wazuh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Wazuh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      System setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-the-wazuh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install the Wazuh Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-your-endpoint-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Add your endpoint agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Add your endpoint agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-agent-installation-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get the agent installation command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-command-on-the-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the command on the endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-the-agent-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm the agent is active
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-verify-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify Data Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-traffic-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Traffic Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nessus-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nessus Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Retention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflecting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -560,6 +743,160 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-wazuh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Wazuh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      System setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-the-wazuh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install the Wazuh Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-your-endpoint-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Add your endpoint agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Add your endpoint agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-agent-installation-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get the agent installation command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-command-on-the-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the command on the endpoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-the-agent-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm the agent is active
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-verify-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify Data Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-traffic-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Traffic Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nessus-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nessus Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Retention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflecting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -578,9 +915,89 @@
   
 
 
-  <h1>Fixing Ubuntu Vulnerabilities</h1>
+<h1 id="building-a-home-siem-with-wazuh">Building A Home SIEM with Wazuh<a class="headerlink" href="#building-a-home-siem-with-wazuh" title="Permanent link">&para;</a></h1>
+<p>As part of developing my cybersecurity skills, I decided to set up a <strong>Wazuh</strong> a server to monitor my home network.</p>
+<p>Wazuh is an open-source platform (SIEM) that provides log analysis, intrusion detection, vulnerability monitoring, and more. It's a great tool for blue teamers and aspiring SOC analysts, as it gives you some hands on practice with monitoring a network for security incidents.</p>
+<hr />
+<h2 id="why-wazuh">Why Wazuh<a class="headerlink" href="#why-wazuh" title="Permanent link">&para;</a></h2>
+<p>I chose Wazuh because:</p>
+<ul>
+<li>It’s completely free and open source.</li>
+<li>It integrates easily with multiple endpoints.</li>
+<li>It provides detailed dashboards for monitoring system security.</li>
+<li>It’s used by professionals for SIEM and endpoint detection &amp; response (EDR).</li>
+</ul>
+<p>My goal was to gain real-world, hands-on experience with log collection, alerting, and analysis — all within a <strong>home lab</strong> environment.</p>
+<hr />
+<h2 id="system-setup">System setup<a class="headerlink" href="#system-setup" title="Permanent link">&para;</a></h2>
+<h3 id="environment"><strong>Environment</strong><a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Host Machine:</strong> Ubuntu 22.04 (MSI Stealth 15M)</li>
+<li><strong>Endpoints:</strong> Ubuntu laptop, MacBook Air (will add the rest of my family's later)</li>
+<li><strong>Network:</strong> Home Wi-Fi router with local IP addressing (192.168.x.x)</li>
+<li><strong>Installation Type:</strong> Wazuh single-node server with web dashboard (VirtualBox)</li>
+</ul>
+<hr />
+<h2 id="step-1-install-the-wazuh-server">Step 1: Install the Wazuh Server<a class="headerlink" href="#step-1-install-the-wazuh-server" title="Permanent link">&para;</a></h2>
+<p>In my opinion, the easiest way to get started with Wazuh is by setting up a Virtual Machine server, using the <a href="https://documentation.wazuh.com/current/deployment-options/virtual-machine/virtual-machine.html">official Wazuh .ova file.</a> Then you can import it into your hypervisor of choice - I used VirtualBox.</p>
+<p>The preconfigured image comes with the Wazuh Manager, Filebeat, Elasticsearch, and the Wazuh Dashboard already set up, which saves a ton of time compared to installing each component manually. Seriously.</p>
+<p>Once imported, make sure your VM settings are correct:</p>
+<ul>
+<li><strong>Memory (RAM)</strong>: Allocate at least 4 GB — more if you plan to monitor multiple endpoints.</li>
+<li><strong>CPU</strong>: 2 cores minimum is recommended for smoother performance.</li>
+<li><strong>Network Adapter</strong>: Use Bridged Adapter mode so the server appears on your local network and can communicate with your agents directly.</li>
+</ul>
+<p>After starting the VM, Wazuh will automatically initialize its services. When it’s finished, you can check the dashboard by accessing it online via the VM's IP address.</p>
+<div class="codehilite"><pre><span></span><code>https://&lt;your-wazuh-server-ip&gt;
+</code></pre></div>
 
+<p>Then you can login with the default credentials, which should be <em>admin</em> and <em>admin</em>.</p>
+<h2 id="step-2-add-your-endpoint-agents">Step 2: Add your endpoint agents<a class="headerlink" href="#step-2-add-your-endpoint-agents" title="Permanent link">&para;</a></h2>
+<p>With your Wazuh server up and running, the next step is to connect your endpoints (the systems you want to monitor). In my case, I started with my Ubuntu laptop and MacBook Air. I plan on adding more, with the permission of my relatives.</p>
+<p>Each endpoint needs a Wazuh agent installed. The agent collects logs, monitors system activity, and sends that data to your Wazuh server for analysis. It acts like a central command, that is fed data from its various sources.</p>
+<h3 id="get-the-agent-installation-command">Get the agent installation command<a class="headerlink" href="#get-the-agent-installation-command" title="Permanent link">&para;</a></h3>
+<p>From your Wazuh Dashboard:</p>
+<ul>
+<li>Go to “Agents” → “Deploy new agent.”</li>
+<li>Select your endpoint’s operating system and CPU architecture.</li>
+<li>Include the IP of your Wazuh server.</li>
+<li>Wazuh will then automatically generate an installation command for you.</li>
+</ul>
+<h3 id="run-the-command-on-the-endpoint">Run the command on the endpoint<a class="headerlink" href="#run-the-command-on-the-endpoint" title="Permanent link">&para;</a></h3>
+<p>On your endpoint machine, open a terminal and run the command provided by Wazuh.
+It will look something like this:</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-so<span class="w"> </span>wazuh-agent.sh<span class="w"> </span>https://packages.wazuh.com/4.x/wazuh-agent.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+sudo<span class="w"> </span>bash<span class="w"> </span>wazuh-agent.sh<span class="w"> </span>--register-server<span class="w"> </span>&lt;WAZUH_SERVER_IP&gt;<span class="w"> </span>--agent-name<span class="w"> </span>&lt;ENDPOINT_NAME&gt;
+</code></pre></div>
 
+<p>Once the installation finishes, start and enable the Wazuh agent:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wazuh-agent
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>wazuh-agent
+</code></pre></div>
+
+<h3 id="confirm-the-agent-is-active">Confirm the agent is active<a class="headerlink" href="#confirm-the-agent-is-active" title="Permanent link">&para;</a></h3>
+<p>Head back to the Wazuh Dashboard → Agents tab.</p>
+<p>You should now see your new endpoint listed with a status of “Active.”</p>
+<ul>
+<li>If it’s showing as pending or disconnected, check your network configuration and ensure your server and agent are on the same subnet.</li>
+</ul>
+<h2 id="step-3-verify-data-flow">Step 3: Verify Data Flow<a class="headerlink" href="#step-3-verify-data-flow" title="Permanent link">&para;</a></h2>
+<p>Once your agent is active, logs should start appearing almost immediately in the dashboard.</p>
+<p>Try generating some activity on your endpoint — running commands, updating packages, or even logging in and out — to watch Wazuh capture the corresponding events. I was personally surprised to see it capture my MacBook's screen being locked. </p>
+<p>Wazuh will also reccomend fixes for various vulnerabilities. Don't be too nervous if you see a bunch of them at first, most of the time these vulnerabilities are nothing to be that worried about. They can be fixed simply, if you follow the directions.</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Getting Wazuh up and running is only the beginning for me. Now that my server is collecting logs and monitoring activity across multiple endpoints, I want to take things further and make my home SIEM more capable and realistic.</p>
+<h3 id="network-traffic-analysis">Network Traffic Analysis<a class="headerlink" href="#network-traffic-analysis" title="Permanent link">&para;</a></h3>
+<p>My main goal right now is to integrate network traffic monitoring. By default, Wazuh focuses on endpoint activity — logins, commands, system alerts, and vulnerabilities. The next step is to add network-level visibility so I can see which devices are communicating, what services they’re using, and whether anything suspicious is happening on the network.</p>
+<p>I’m currently exploring ways to combine Wazuh with Zeek or Suricata, or to export logs directly from my router/firewall (although not sure how leninent BT is with this sort of stuff) into Wazuh for deeper insight into network behavior.</p>
+<h3 id="nessus-compatibility">Nessus Compatibility<a class="headerlink" href="#nessus-compatibility" title="Permanent link">&para;</a></h3>
+<p>While Wazuh’s built-in vulnerability detection is powerful, I want to pair it with a dedicated scanner. My MacBook doubles as a Nessus server, so I plan to feed scan results into Wazuh to track vulnerabilities and remediation over time.</p>
+<h3 id="log-retention">Log Retention<a class="headerlink" href="#log-retention" title="Permanent link">&para;</a></h3>
+<p>As data grows, storage management becomes increasingly important. I plan to experiment with remote log storage and log rotation strategies to keep performance stable while still retaining useful historical data for analysis.</p>
+<h2 id="reflecting">Reflecting<a class="headerlink" href="#reflecting" title="Permanent link">&para;</a></h2>
+<p>Setting up Wazuh has been a very rewarding experience, and given me hands-on experience with real-world SIEM concepts such as log collection and analysis to alerting and vulnerability monitoring.</p>
+<p>There’s still a lot to learn, but that is the point! As I continue improving my setup with network traffic monitoring, Nessus integration, and better data retention, I’m getting closer to understanding what it’s like to operate in a professional SOC environment.</p>
+<p>If you’re interested in cybersecurity or want to practice blue team skills, I highly recommend trying out Wazuh yourself. It's not that difficult (if setting up as a dedicated VM) and you’ll learn a ton about how systems communicate, how attacks are detected, and how data becomes visibility.</p>
 
 
 

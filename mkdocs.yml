@@ -30,7 +30,7 @@ nav:
       - DNSpy: tools/dnspy.md
       - VTScan: tools/vtscan.md
   - Blog:
-      - Fixing Ubuntu Vulnerabilities: blog/fixing-ubuntu-vulnerabilities.md
+      - Setting Up Wazuh: blog/wazuh-setup.md
   - References: references.md
 
 markdown_extensions:
