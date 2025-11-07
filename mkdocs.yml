@@ -29,6 +29,8 @@ nav:
   - Tools:
       - DNSpy: tools/dnspy.md
       - VTScan: tools/vtscan.md
+  - Blog:
+      - Fixing Ubuntu Vulnerabilities: blog/fixing-ubuntu-vulnerabilities.md
   - References: references.md
 
 markdown_extensions:
