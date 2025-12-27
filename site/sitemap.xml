@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nicoleman0.github.io/docu-site/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/about/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/references/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
+    </url>
+    <url>
+         <loc>https://nicoleman0.github.io/docu-site/blog/port-scanner-go/</loc>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/blog/wazuh-setup/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/policies/aup/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/tools/dnspy/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/tools/vtscan/</loc>
-         <lastmod>2025-11-07</lastmod>
+         <lastmod>2025-12-27</lastmod>
     </url>
 </urlset>
