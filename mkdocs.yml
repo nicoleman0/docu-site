@@ -31,6 +31,7 @@ nav:
       - VTScan: tools/vtscan.md
   - Blog:
       - Setting Up Wazuh: blog/wazuh-setup.md
+      - Port Scanner in Go: blog/port-scanner-go.md
   - References: references.md
 
 markdown_extensions:
