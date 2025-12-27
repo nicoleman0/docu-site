@@ -1,5 +1,9 @@
 # Building a Port Scanner in Go
 
+*A lightning fast port scanner written in Go.*
+
+[GitHub Repo](https://github.com/nicoleman0/portscanner-go)
+
 As a security enthusiast, I've found that understanding network reconnaissance is foundational. To deepen my knowledge of both Go and network security, I built **portscanner-go**: a lightweight, concurrent TCP port scanner designed for speed and simplicity.
 
 ---
