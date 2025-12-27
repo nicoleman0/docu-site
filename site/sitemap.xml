@@ -13,10 +13,6 @@
          <lastmod>2025-12-27</lastmod>
     </url>
     <url>
-         <loc>https://nicoleman0.github.io/docu-site/blog/port-scanner-go/</loc>
-         <lastmod>2025-12-27</lastmod>
-    </url>
-    <url>
          <loc>https://nicoleman0.github.io/docu-site/blog/wazuh-setup/</loc>
          <lastmod>2025-12-27</lastmod>
     </url>
@@ -26,6 +22,10 @@
     </url>
     <url>
          <loc>https://nicoleman0.github.io/docu-site/tools/dnspy/</loc>
+         <lastmod>2025-12-27</lastmod>
+    </url>
+    <url>
+         <loc>https://nicoleman0.github.io/docu-site/tools/port-scanner-go/</loc>
          <lastmod>2025-12-27</lastmod>
     </url>
     <url>

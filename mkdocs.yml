@@ -29,9 +29,9 @@ nav:
   - Tools:
       - DNSpy: tools/dnspy.md
       - VTScan: tools/vtscan.md
+      - Port Scanner in Go: tools/port-scanner-go.md
   - Blog:
       - Setting Up Wazuh: blog/wazuh-setup.md
-      - Port Scanner in Go: blog/port-scanner-go.md
   - References: references.md
 
 markdown_extensions:
